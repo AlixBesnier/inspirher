@@ -1,0 +1,18 @@
+development:
+  cloud_name: dkzfps9zm
+  api_key: '826175218441828'
+  api_secret: wXdlSHY183070Nno74txGc-RRlY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dkzfps9zm
+  api_key: '826175218441828'
+  api_secret: wXdlSHY183070Nno74txGc-RRlY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dkzfps9zm
+  api_key: '826175218441828'
+  api_secret: wXdlSHY183070Nno74txGc-RRlY
+  enhance_image_tag: true
+  static_image_support: false

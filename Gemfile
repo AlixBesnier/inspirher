@@ -17,15 +17,20 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+gem 'cloudinary', '1.1.7'
+
+gem 'ckeditor', '~> 4.2', '>= 4.2.3'
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
 

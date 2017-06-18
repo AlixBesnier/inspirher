@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503152139) do
+ActiveRecord::Schema.define(version: 20170618170800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type", using: :btree
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "category"
+    t.string   "occupation"
+    t.string   "language"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "author"
+    t.boolean  "published",  default: false
+    t.date     "date"
+    t.integer  "stage_id"
+    t.string   "photo"
+    t.index ["stage_id"], name: "index_interviews_on_stage_id", using: :btree
+  end
+
+  create_table "stages", force: :cascade do |t|
+    t.string   "area"
+    t.date     "date"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "city"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,4 +71,5 @@ ActiveRecord::Schema.define(version: 20170503152139) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "interviews", "stages"
 end
