@@ -6,4 +6,5 @@ class Interview < ApplicationRecord
   belongs_to :stage
 
   mount_uploader :photo, PhotoUploader
+  mount_uploader :video, VideoUploader
 end

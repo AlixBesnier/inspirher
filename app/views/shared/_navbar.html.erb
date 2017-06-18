@@ -4,13 +4,20 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to "NOTRE PROJET", "#",class: "navbar-wagon-item navbar-wagon-link"%>
+    <div class="dropdown">
+      <%= link_to "NOTRE PROJET", "#",class: "navbar-wagon-item navbar-wagon-link dropdown-toggle", "data-toggle" => "dropdown" %>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Le projet</a></li>
+        <li><a href="#">Pourquoi ?</a></li>
+        <li><a href="#">L'équipe</a></li>
+      </ul>
+    </div>
+
     <%= link_to "PORTRAITS DE FEMMES", "#",class: "navbar-wagon-item navbar-wagon-link"%>
     <%= link_to "LE PARCOURS", "#",class: "navbar-wagon-item navbar-wagon-link"%>
     <%= link_to "CONTACT", "#",class: "navbar-wagon-item navbar-wagon-link"%>
   </div>
 </div>
-
 
 <!-- Profile picture and dropdown -->
 <!-- Dropdown list appearing on mobile only -->

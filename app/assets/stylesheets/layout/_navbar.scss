@@ -27,8 +27,13 @@
 .title {
 color: white;
 font-family: "Oksana";
-font-size: 40px;
+font-size: 30px;
 font-weight: bold;
+}
+
+.title:hover {
+text-decoration: none;
+color: white;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -52,7 +57,7 @@ font-weight: bold;
 }
 .navbar-wagon-link:hover {
   color: #32b0a5;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Navbar right button */
