@@ -1,20 +1,36 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to "INSPIR'HER", "#", class: "title"%>
-
+  <div class="navbar-wagon-left">
+    <%= cl_image_tag("Logocourtv1_s6kgev.png", width: 70, height: 70, crop: :fill) %>
+    <%= link_to "INSPIR'HER", root_path , class: "title"%>
+  </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <div class="dropdown">
       <%= link_to "NOTRE PROJET", "#",class: "navbar-wagon-item navbar-wagon-link dropdown-toggle", "data-toggle" => "dropdown" %>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Le projet</a></li>
-        <li><a href="#">Pourquoi ?</a></li>
-        <li><a href="#">L'équipe</a></li>
+        <li><a href="project.html">LE PROJET</a></li>
+        <li><a href="why.html">POURQUOI ?</a></li>
+        <li><a href="team.html">L'EQUIPE</a></li>
       </ul>
     </div>
-
-    <%= link_to "PORTRAITS DE FEMMES", "#",class: "navbar-wagon-item navbar-wagon-link"%>
-    <%= link_to "LE PARCOURS", "#",class: "navbar-wagon-item navbar-wagon-link"%>
+    <div class="dropdown">
+      <%= link_to "PORTRAITS DE FEMMES", "#",class: "navbar-wagon-item navbar-wagon-link dropdown-toggle", "data-toggle" => "dropdown"%>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="project.html">TOUS</a></li>
+        <li><a href="why.html">PAR CATEGORIES</a></li>
+        <li><a href="team.html">PAR PAYS</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <%= link_to "LE PARCOURS", "#",class: "navbar-wagon-item navbar-wagon-link dropdown-toggle", "data-toggle" => "dropdown"%>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="project.html">ITINERAIRE</a></li>
+        <li><a href="why.html">EUROPE DU SUD</a></li>
+        <li><a href="team.html">EUROPE DE L'EST</a></li>
+        <li><a href="team.html">EUROPE DE L'OUEST</a></li>
+      </ul>
+    </div>
     <%= link_to "CONTACT", "#",class: "navbar-wagon-item navbar-wagon-link"%>
   </div>
 </div>
